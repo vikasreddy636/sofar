@@ -33,12 +33,15 @@ make sure you install the pacage in the current working directory
 rviz is a 3d visualization tool for ROS applications. It provides a view of your robot model, captures sensor information from robot sensors, and replay captured data. It can display data from cameras, lasers, from 3D and 2D devices including pictures and point clouds.The robot state publisher helps you to broadcast the state of your robot to the tf transform library.Joint state publisher is one of the ROS packages that is commonly used to interact with each joint of the robot. The package contains the joint_state_publisher node, which will find the nonfixed joints from the URDF model and publish the joint state values of each joint in the sensor_msgs/JointState message format.
 
 To install rviz in ros 
+
 `sudo apt-get install -y rviz`
 
 For installing joint state publisher
+
 `sudo apt-get install -y joint-state-publisher`
 
 For installing robot state publisher
+
 `sudo apt-get install ros-noetic-robot-state-publisher`
 
 # move_base
