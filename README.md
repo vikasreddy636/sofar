@@ -75,7 +75,7 @@ To install the package
 
 
 
-# simmulation of the code
+# simulation of the code
 
 Git clone the package
 
