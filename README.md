@@ -13,10 +13,10 @@ The main aim of the project is to produce a safe path for the robot to execute b
 
 
 ## uml diagram
-!![Screenshot 2021-07-08 at 10 34 24 PM](https://user-images.githubusercontent.com/73032093/125801199-624b265c-c95a-44f2-a92e-4b0542e43d4f.png)
+![Screenshot 2021-07-08 at 10 34 24 PM](https://user-images.githubusercontent.com/73032093/125801199-624b265c-c95a-44f2-a92e-4b0542e43d4f.png)
 
 ## sequential diagram
-!![nav02](https://user-images.githubusercontent.com/73032093/125801295-7bc6ac2b-77be-4b72-987f-ccc2ca98ab00.jpeg)
+![nav02](https://user-images.githubusercontent.com/73032093/125801295-7bc6ac2b-77be-4b72-987f-ccc2ca98ab00.jpeg)
 
 ## modules that are used
 
@@ -107,7 +107,7 @@ To plan the path and navigate the robot
 
 viedo simulation of the project
 
-!https://user-images.githubusercontent.com/73032093/125797589-5cbe51c8-5839-4468-aa29-0940e857ee6a.mp4
+https://user-images.githubusercontent.com/73032093/125797589-5cbe51c8-5839-4468-aa29-0940e857ee6a.mp4
 
 
 
