@@ -49,5 +49,8 @@ roslaunch mobile_robot_navigation_project move.launch
 
 
 viedo simulation of the project
-!https://user-images.githubusercontent.com/73032093/125796922-58fea1ea-4299-4829-b455-b36f528ede5a.mp4
+
+![(https://user-images.githubusercontent.com/73032093/125797381-5c5ab7ef-281c-451a-8ece-f6bbffe9e28b.mp4)](url)
+
+
 
