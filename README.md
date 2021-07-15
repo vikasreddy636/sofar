@@ -12,45 +12,102 @@ This project is a simulation of a mobile robot which does autonomous navigation 
 The main aim of the project is to produce a safe path for the robot to execute by processing the data like odometry and lidar sensors in the environment map. We create maps of environments, localize the robot in the environment, make the robots perform path planning, visualize data of the different Navigation processes and using SLAM, and configure the different Navigation nodes
 
 
+## uml diagram
+!![Screenshot 2021-07-08 at 10 34 24 PM](https://user-images.githubusercontent.com/73032093/125801199-624b265c-c95a-44f2-a92e-4b0542e43d4f.png)
+
+## sequential diagram
+!![nav02](https://user-images.githubusercontent.com/73032093/125801295-7bc6ac2b-77be-4b72-987f-ccc2ca98ab00.jpeg)
+
+## modules that are used
+
+# slam-gmapping
+
+The gmapping package provides laser-based SLAM (Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create a 2-D occupancy grid map from laser and pose data collected by a mobile robot.
+
+make sure you install the pacage in the current working directory 
+
+`https://github.com/ros-perception/slam_gmapping.git`
+
+#Rviz
+
+rviz is a 3d visualization tool for ROS applications. It provides a view of your robot model, captures sensor information from robot sensors, and replay captured data. It can display data from cameras, lasers, from 3D and 2D devices including pictures and point clouds.The robot state publisher helps you to broadcast the state of your robot to the tf transform library.Joint state publisher is one of the ROS packages that is commonly used to interact with each joint of the robot. The package contains the joint_state_publisher node, which will find the nonfixed joints from the URDF model and publish the joint state values of each joint in the sensor_msgs/JointState message format.
+
+To install rviz in ros 
+`sudo apt-get install -y rviz`
+
+For installing joint state publisher
+`sudo apt-get install -y joint-state-publisher`
+
+For installing robot state publisher
+`sudo apt-get install ros-noetic-robot-state-publisher`
+
+#move_base
+The move_base node provides a ROS interface for configuring, running, and interacting with the navigation stack on a robot .Running the move_base node on a robot that is properly configured results in a robot that will attempt to achieve a goal pose with its base to within a user-specified tolerance. In the absence of dynamic obstacles,
+
+Packages that need to be installed
+
+`cd /opt/ros/noetic/lib`
+
+`sudo apt-get install ros-noetic-move-base-msgs`
+
+#Planner
+
+This shows the local costmap that the navigation stack uses for navigation. The yellow line is the detected obstacle. For the robot to avoid collision, the robot's footprint should never intersect with a cell that contains an obstacle.
+In the global costmap is everything the robot knows from previous visits and stored knowledge e.g. the map. In the local costmap is everything that can be known from the current position with the sensors right now. 
+
+#Navigation
+
+The Navigation Stack is fairly simple on a conceptual level. It takes in information from odometry and sensor streams and outputs velocity commands to send to a mobile base. As a prerequisite for navigation stack the robot should have a tf transform tree in place, and publish sensor data using the correct ROS Message types. Also, the Navigation Stack needs to be configured for the shape and dynamics of a robot to perform at a high level. To help with this process, this manual is meant to serve as a guide to typical Navigation Stack set-up and configuration.
 
 
+To install the package
 
-
-
-
-
-
-
-
-
-
-
-
+`sudo apt-get install ros-noetic-navigation`
 
 
 
 # simmulation of the code
 
+Git clone the package
+
+`https://github.com/vikasreddy636/sofar.git`
+
 To launch the handshake between unity and ros
 
-roslaunch mobile_robot_navigation_project navigation.launch
+`roslaunch mobile_robot_navigation_project navigation.launch`
 
-for localisation 
+for localisation the robot in the environment
 
-roslaunch mobile_robot_navigation_project gmapping.launch
+`roslaunch mobile_robot_navigation_project gmapping.launch`
 
 for urdf of husky etc in rviz
 
-roslaunch mobile_robot_navigation_project rviz.launch
+`roslaunch mobile_robot_navigation_project rviz.launch`
+
+To plan the path and navigate the robot 
+`roslaunch mobile_robot_navigation_project move.launch`
 
 
-to navigate
-roslaunch mobile_robot_navigation_project move.launch
+#packages need to be installed
+
+`cd /opt/ros/noetic/lib `
+
+
+`sudo apt-get install ros-noetic-move-base-msgs`
+
+
+`sudo apt-get install ros-noetic-navigation`
+
+`sudo apt-get install ros-noetic-lms1xx`
+
+`https://github.com/husky/husky.git`
+
+
 
 
 viedo simulation of the project
 
-![(https://user-images.githubusercontent.com/73032093/125797381-5c5ab7ef-281c-451a-8ece-f6bbffe9e28b.mp4)](url)
+!https://user-images.githubusercontent.com/73032093/125797589-5cbe51c8-5839-4468-aa29-0940e857ee6a.mp4
 
 
 
