@@ -94,11 +94,14 @@ for urdf of husky etc in rviz
 `roslaunch mobile_robot_navigation_project rviz.launch`
 
 To plan the path and navigate the robot 
+
 `roslaunch mobile_robot_navigation_project move.launch`
 
+for rqt graph
 
+`rosrun rqt_graph rqt_graph`
 
-
+![rosgraph](https://user-images.githubusercontent.com/73032093/125849584-219f39fc-8848-4a42-80bd-476f1e363265.png)
 
 
 viedo simulation of the project
