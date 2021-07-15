@@ -4,7 +4,7 @@
 
 ## Student(s): Ginne vikas reddy(5061211), Elham Mohammadi(5093904) ,Donya Mostaghni yazdi(5060506), Rohit Adapa(5065424)
 
-## Tutor(s): Fulvio Mastrogiovanni , mohamad Alameh, Alessandro Carfi, Simone Maccio
+## Tutor(s): Fulvio Mastrogiovanni , mohamad Alameh, Alessandro Carfi, Simone Macciò
 
 
 This project is a simulation of a mobile robot which does autonomous navigation in the given environment . In this the robot(husky) is equipped with a lidar sensor, microcontroller and a four wheel drive system, The robot is expected to navigate by itself autonomously and map the surrounding simultaneously by avoiding obstacles until it reaches the destination
@@ -28,6 +28,10 @@ make sure you install the pacage in the current working directory
 
 `https://github.com/ros-perception/slam_gmapping.git`
 
+In order to establish a connection of the Lidar to ROS Kinetic
+
+`sudo apt-get install ros-noetic-lms1xx`
+
 # Rviz
 
 rviz is a 3d visualization tool for ROS applications. It provides a view of your robot model, captures sensor information from robot sensors, and replay captured data. It can display data from cameras, lasers, from 3D and 2D devices including pictures and point clouds.The robot state publisher helps you to broadcast the state of your robot to the tf transform library.Joint state publisher is one of the ROS packages that is commonly used to interact with each joint of the robot. The package contains the joint_state_publisher node, which will find the nonfixed joints from the URDF model and publish the joint state values of each joint in the sensor_msgs/JointState message format.
@@ -44,6 +48,7 @@ For installing robot state publisher
 
 `sudo apt-get install ros-noetic-robot-state-publisher`
 
+
 # move_base
 The move_base node provides a ROS interface for configuring, running, and interacting with the navigation stack on a robot .Running the move_base node on a robot that is properly configured results in a robot that will attempt to achieve a goal pose with its base to within a user-specified tolerance. In the absence of dynamic obstacles,
 
@@ -52,6 +57,7 @@ Packages that need to be installed
 `cd /opt/ros/noetic/lib`
 
 `sudo apt-get install ros-noetic-move-base-msgs`
+
 
 # Planner
 
@@ -91,19 +97,6 @@ To plan the path and navigate the robot
 `roslaunch mobile_robot_navigation_project move.launch`
 
 
-# packages need to be installed
-
-`cd /opt/ros/noetic/lib `
-
-
-`sudo apt-get install ros-noetic-move-base-msgs`
-
-
-`sudo apt-get install ros-noetic-navigation`
-
-`sudo apt-get install ros-noetic-lms1xx`
-
-`https://github.com/husky/husky.git`
 
 
 
