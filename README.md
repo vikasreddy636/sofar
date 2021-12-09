@@ -81,6 +81,8 @@ Git clone the package
 
 `https://github.com/vikasreddy636/sofar.git`
 
+`https://github.com/vikasreddy636/hus.git`
+
 To launch the handshake between unity and ros
 
 `roslaunch mobile_robot_navigation_project navigation.launch`
